@@ -1,6 +1,6 @@
 from pandas import read_table
 
-def download_data(fileLocation, fields):
+def download_data(fileLocation):
     '''
     Downloads the data for this script into a pandas DataFrame. Uses columns indices provided
     '''
@@ -23,9 +23,7 @@ def download_data(fileLocation, fields):
         index_col=None,
 
         # Generate column headers row from each column number
-        header=0,          # use the first line as headers
-
-        usecols=fields
+        header=None          # use the first line as headers       
     )
 
     # Return the entire frame
